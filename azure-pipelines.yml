@@ -27,5 +27,5 @@ steps:
 - script: |
     pip install pytest pytest-azurepipelines
     pip install pytest-cov
-    pytest
+    pytest tests --doctest-modules --junitxml=junit/test-output.xml --cov=. --cov-report=xml --cov-report=html
   displayName: 'Test with pytest'
